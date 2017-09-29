@@ -160,10 +160,10 @@ Je code is pas goed als er geen Warnings en Errors zijn!
     
   */
 
- function tdz () {
-     console.log(dinner);
+//  function tdz () {
+//      console.log(dinner);
 
 
-     var dinner = 'Lasagna';
- }
- tdz();
+//      var dinner = 'Lasagna';
+//  }
+//  tdz();
