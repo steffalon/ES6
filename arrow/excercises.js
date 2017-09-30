@@ -13,25 +13,24 @@
  */
 
 // Corrigeer 1.
-var add () => 1 + 1;
+var add = () => {return 1+1;}
 console.log(add());
 
 // Corrigeer 2.
-var divide = num1, num2 => num1 / num2;
-console.log(divide(7, 2))
+var divide = (num1, num2) => {return num1 / num2};
+console.log(divide(7, 2));
 
 // Corrigeer 3.
 var square = (width, length) => {
     const double = 2;
-    let width = width * double;
-    let length = length * double;
-    width * length;
-
+    var width = width * double;
+    var length = length * double;
+    return width * length;
 }
 console.log(square(10, 15));
 
 // Corrigeer 4.
-var counting = {4, 2, 14}.map((x) => {
+var counting = ([4, 2, 14]).map((x) => {
     var add = x + 1;
     return x * add;
 });
@@ -53,31 +52,41 @@ const score = [
 ];
 
 // Herschrijf 1.
-const oneven = numbers.filter(function (number) {
-    return number % 2;
-});
+// const oneven = numbers.filter(function (number) {
+//     return number % 2;
+// });
+
+const oneven = numbers.filter(number => number % 2);
 console.log(oneven);
 
 // Herschrijf 2.
-const sum = numbers.reduce(function(first, second) {
-    return first + second;
-}, 0);
+// const sum = numbers.reduce(function(first, second) {
+//     return first + second;
+// }, 0);
+
+const sum = numbers.reduce((first, second) => first + second);
 console.log(sum);
 
+
 // Herschrijf 3.
-const total = score.reduce(function(first, second) {
-    return first + second.grade;
-}, 0);
+// const total = score.reduce(function(first, second) {
+//     return first + second.grade;
+// }, 0);
+const total = score.reduce((first, second) => first + second.grade, 0);
 console.log(total);
 
 // Herschrijf 4.
-const range = numbers.filter(function(number) {
-    return number > 5 && number < 30;
-});
+// const range = numbers.filter(function(number) {
+//     return number > 5 && number < 30;
+// });
+
+const range = numbers.filter(number => (number > 5) && (number < 30));
 console.log(range);
 
 // Herschrijf 5.
-const double = numbers.map(function(number) {
-    return number * 2;
-});
+// const double = numbers.map(function(number) {
+//     return number * 2;
+// });
+
+const double = numbers.map(number => (number * 2));
 console.log(double);

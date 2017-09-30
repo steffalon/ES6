@@ -26,10 +26,12 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// function setWidth() {
-//     var width = 100;
-// }
-// console.log(width);
+function setWidth() {
+  var width = 100;
+  return width;
+}
+let width = setWidth();
+ console.log(width);
 
 /*
     Opgave 2.
@@ -39,12 +41,11 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// var size = 100;
-// if (size > 50) {
-//     var boxSize = size * 5;
-//     console.log(boxSize);
-// }
-// console.log(boxSize);
+var size = 100;
+if (size > 50) {
+  let boxSize = size * 5;
+  console.log(boxSize);
+}
 
 /*
     Opgave 3.
@@ -55,13 +56,13 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// let winningPoints = 100;
-// let bonus = false;
-//
-// if (winningPoints > 50) {
-//     let bonus = true;
-// }
-// console.log( bonus);
+let winningPoints = 100;
+let bonus = false;
+
+if (winningPoints > 50) {
+    let bonus = true; //het geld alleen in de if statement en niet buiten. Dus het krijgt geen nieuwe waarden buiten de if statement.
+}
+console.log(bonus);
 
 /*
     Opgave 4.
@@ -81,17 +82,14 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// const person = {
-//     name: 'Bowie',
-//     died: 2012
-// }
-//
-// person = {
-//     name: 'Bowie',
-//     died: 2016
-// }
-//
-// console.log(person);
+const person = {
+    name: 'Bowie',
+    died: 2012
+}
+
+person.name = 'Bowie';
+person.died = 2016;
+console.log(person);
 
 
 /*
@@ -106,9 +104,12 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// var name = 'Lesson 1: ES6 Variables';
-// console.log(name);
-// console.log(window.name);
+ (function() {
+   let name = 'Lesson 1: ES6 Variables';
+   console.log(name);
+ }());
+
+ console.log(window.name);
 
 /*
     Opgave 7.
@@ -116,7 +117,10 @@ Je code is pas goed als er geen Warnings en Errors zijn!
     OPM: Oh ja, de naam van de variabele mag je dus niet wijzigen.
 
  */
-
+ (() => {
+   let name = 'Lesson 1: ES6 Variables';
+   console.log(name);
+ })();
 
 /*
     Opgave 8.
@@ -126,12 +130,13 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// function varLeak () {
-//     name = 'een foutje';
-// }
-// varLeak();
-//
-// console.log(window.name);
+function varLeak () {
+    var name = 'een foutje';
+    return name;
+}
+console.log(varLeak());
+
+console.log(window.name);
 
 
 /*
@@ -142,14 +147,14 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// for (var i = 0; i < 3; i++) {
-//     console.log(i);
-//
-//     setTimeout(function () {
-//        alert ('This is number: ' + i);
-//     }, 3000);
-//
-//  }
+for (let i = 0; i < 3; i++) {
+    console.log(i);
+
+    // setTimeout(function () {
+    //    alert ('This is number: ' + i);
+    // }, 3000);
+
+ }
 
 
  /*
@@ -157,13 +162,11 @@ Je code is pas goed als er geen Warnings en Errors zijn!
     Lees documentatie over hoisting na
 
     Experimenteer met Const en Let, gebruik de console voor error checking
-    
+
   */
 
-//  function tdz () {
-//      console.log(dinner);
-
-
-//      var dinner = 'Lasagna';
-//  }
-//  tdz();
+ function tdz () {
+    const dinner = 'Lasagna';
+     console.log(dinner);
+ }
+ tdz();
