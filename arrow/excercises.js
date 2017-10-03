@@ -13,11 +13,11 @@
  */
 
 // Corrigeer 1.
-var add = () => {return 1+1;}
+var add = () => (1+1);
 console.log(add());
 
 // Corrigeer 2.
-var divide = (num1, num2) => {return num1 / num2};
+var divide = (num1, num2) => (num1 / num2);
 console.log(divide(7, 2));
 
 // Corrigeer 3.
